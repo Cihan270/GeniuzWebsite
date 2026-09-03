@@ -22,23 +22,26 @@ export type WebsiteScanDimension = {
 }
 
 export const websiteScanPrototypeMeta = {
-  label: "Prototype / demonstratie — geen live crawl",
+  label: "Prototype — alle acht dimensies worden gemeten",
   resultBanner:
-    "Demonstratieresultaat — vaste demodata, geen analyse van de ingevoerde URL.",
+    "Alle scores zijn gemeten op de opgegeven pagina. Performance en toegankelijkheid meten structurele signalen uit de HTML en de serverresponstijd, geen Lighthouse-meting in een browser.",
   providerNote:
-    "Later: ScanProvider.analyze(input). Fase 1 gebruikt alleen MockWebsiteScanProvider + deze dataset.",
+    "Fase 2b: HttpWebsiteScanProvider meet acht dimensies via /api/website-scan. Upgradepad: scorePerformance en scoreAccessibility vervangen door PageSpeed Insights.",
 } as const
 
 export const websiteScanFlowCopy = {
   urlLabel: "Website-URL",
   urlHelp:
-    "Je kunt een URL invullen voor de flow. Het resultaat blijft een vaste demonstratiedataset.",
+    "De opgegeven pagina wordt opgehaald en geanalyseerd, samen met robots.txt en llms.txt.",
   urlPlaceholder: "www.voorbeeld.nl",
-  submitLabel: "Toon demonstratie",
-  loadingLabel: "Demonstratie laden…",
-  overallLabel: "Overall score (demo)",
-  dimensionsLabel: "Dimensies (vaste demodata)",
+  submitLabel: "Scan website",
+  loadingLabel: "Website analyseren…",
+  overallLabel: "Score gemeten dimensies",
+  dimensionsLabel: "Dimensies",
   resetLabel: "Andere URL proberen",
+  measuredBadge: "Gemeten",
+  demoBadge: "Demodata",
+  checksLabel: "Toon onderbouwing",
 } as const
 
 /** Fixed demonstratie scores — identical for every URL in the prototype. */

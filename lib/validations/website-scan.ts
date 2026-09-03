@@ -1,8 +1,11 @@
 import { z } from "zod"
 
 /**
- * Website Scan input — URL is collected for UX only.
- * Mock provider ignores the host and returns fixed demodata.
+ * Website Scan input.
+ *
+ * Fase 2a: the URL is actually fetched server-side, so this schema is a real
+ * gate rather than UX decoration. Network-level safety (private ranges,
+ * redirects, ports) is enforced separately in lib/scans/website-fetch.
  */
 export const websiteScanInputSchema = z.object({
   url: z
@@ -27,6 +30,11 @@ export const websiteScanInputSchema = z.object({
 })
 
 export type WebsiteScanInputParsed = z.infer<typeof websiteScanInputSchema>
+
+/** Body accepted by POST /api/website-scan. */
+export const websiteScanApiSchema = websiteScanInputSchema
+
+export type WebsiteScanApiPayload = z.infer<typeof websiteScanApiSchema>
 
 export function normalizeWebsiteUrl(url: string): string {
   const trimmed = url.trim()

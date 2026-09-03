@@ -9,26 +9,26 @@ export const websiteScanPage: ScanPageContent = {
   eyebrow: "Website Scan",
   h1: "Website Scan: techniek, content, vindbaarheid",
   h1Accent: "techniek, content, vindbaarheid",
-  lead: "Een expliciet prototype van hoe we websitescan-inzichten presenteren. Vul een URL in voor de flow — het resultaat is altijd vaste demodata, geen live crawl.",
-  prototypeLabel: "Prototype / demonstratie — geen live crawl",
+  lead: "Vul een URL in en we halen de pagina op. Alle acht dimensies worden gemeten, en je kunt per dimensie uitklappen waar de score vandaan komt.",
+  prototypeLabel: "Prototype — acht dimensies, gemeten uit de opgehaalde pagina",
   seo: {
     title: "Website Scan (prototype) | Geniuz",
     description:
-      "Website Scan-prototype van Geniuz: demonstratieresultaat met vaste demodata. Geen live crawl of echte websitescan in deze versie.",
+      "Website Scan van Geniuz: techniek, content en vindbaarheid gemeten op de opgegeven URL. Acht dimensies met per controle een onderbouwing.",
   },
   disclaimer:
-    "Dit is een expliciet prototype. Je kunt een URL invullen voor de UX-flow; het resultaat is altijd een vaste demonstratiedataset en geen live analyse van jouw site.",
+    "De opgegeven pagina wordt opgehaald en geanalyseerd, samen met robots.txt en llms.txt. Alleen openbaar bereikbare pagina's worden gescand; het resultaat wordt niet opgeslagen.",
   sections: [
     {
       id: "intro",
-      heading: "Demonstratie van de scanflow",
-      body: "De Website Scan staat los van de organisatiebrede AI Opportunity Scan. In deze versie tonen we vaste demoscores (SEO, performance, toegankelijkheid, content, conversie, metadata, structured data, AI/search-readiness).",
+      heading: "Wat er gemeten wordt",
+      body: "Acht dimensies, bepaald uit de opgehaalde HTML, robots.txt, llms.txt en de serverresponstijd: SEO-basis, performance, toegankelijkheid, contentkwaliteit, conversiepad, metadata, structured data en AI/search-readiness. Elke score is opgebouwd uit benoemde controles die je per dimensie kunt uitklappen, zodat je ziet welk punt waar vandaan komt.",
     },
     {
       id: "prototype",
       eyebrow: "Prototype",
-      heading: "Geen live crawl",
-      body: "Er is geen analyze-API die een crawl claimt. Scores komen uit een vaste demodataset. Later kan een echte provider dezelfde UI voeden.",
+      heading: "Wat deze scan niet doet",
+      body: "De scan leest de HTML zoals die wordt geleverd; content die pas via JavaScript verschijnt telt niet mee, en dat meldt de scan apart. Performance meet structurele signalen en serverresponstijd, geen Lighthouse-meting met echte gebruikersdata. Toegankelijkheid dekt wat in de markup te controleren is — kleurcontrast en focusvolgorde vragen een gerenderde pagina. Contentkwaliteit en conversiepad meten structuur, geen redactionele of overtuigende kwaliteit. En de uitkomst voorspelt geen posities in zoek- of antwoordmachines.",
     },
   ],
   finalCta: {

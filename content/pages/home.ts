@@ -190,10 +190,10 @@ export const homePage: HomePageContent = {
         id: "website-scan",
         title: "Website Scan",
         summary:
-          "Demonstratie van een scanflow voor techniek, content en vindbaarheid — los van de organisatiebrede Opportunity Scan.",
+          "Scanflow voor techniek, content en vindbaarheid — los van de organisatiebrede Opportunity Scan.",
         href: "/website-scan",
         badge: "Prototype",
-        prototypeNote: "Geen live crawl — vaste demodata.",
+        prototypeNote: "Acht dimensies, gemeten op de opgegeven pagina.",
       },
     ],
   },
@@ -276,7 +276,7 @@ export const homePage: HomePageContent = {
         id: "opportunity-vs-website",
         question: "Wat is het verschil tussen de Opportunity Scan en de Website Scan?",
         answer:
-          "De AI Opportunity Scan geeft een indicatie op organisatieniveau (processen, tijdswaarde). De Website Scan is in deze fase een expliciet prototype met vaste demodata — geen live crawl van jouw site.",
+          "De AI Opportunity Scan geeft een indicatie op organisatieniveau (processen, tijdswaarde). De Website Scan kijkt naar één opgegeven pagina en meet daarvan acht dimensies: techniek, vindbaarheid, performance, toegankelijkheid, content en conversie.",
       },
       {
         id: "resultaten",

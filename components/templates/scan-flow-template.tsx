@@ -99,7 +99,7 @@ export function ScanFlowTemplate({
             <Reveal luxury>
               <p className="border-t border-border pt-8 font-editorial text-xl italic leading-snug text-foreground/90 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-12">
                 {content.scanType === "website"
-                  ? "Expliciet prototype — vaste demodata, geen live crawl van jouw site."
+                  ? "Structurele meting van de opgegeven pagina — geen voorspelling van posities."
                   : "Indicatieve score en tijdswaardebandbreedte — geen schijnzekerheid."}
               </p>
             </Reveal>

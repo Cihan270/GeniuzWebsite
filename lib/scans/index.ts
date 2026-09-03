@@ -23,10 +23,38 @@ export {
 } from "@/lib/scans/opportunity-storage"
 
 export {
+  composeReport,
   getWebsiteScanProvider,
+  HttpWebsiteScanProvider,
   MockWebsiteScanProvider,
+  overallFromMeasured,
+  remainingDemoDimensions,
   setWebsiteScanProvider,
+  WEBSITE_SCAN_MEASURED_IDS,
+  type DemoDimension,
+  type MeasuredDimension,
+  type ReportDimension,
+  type WebsiteScanCheck,
   type WebsiteScanInput,
   type WebsiteScanProvider,
   type WebsiteScanReport,
 } from "@/lib/scans/website-provider"
+
+export {
+  AI_CRAWLER_AGENTS,
+  buildMeasuredDimensions,
+  extractHtmlFacts,
+  parseRobotsTxt,
+  ROBOTS_NOT_FOUND,
+  scoreAccessibility,
+  scoreAiReadiness,
+  scoreContent,
+  scoreConversion,
+  scoreMetadata,
+  scorePerformance,
+  scoreSeo,
+  scoreStructuredData,
+  type HtmlFacts,
+  type ResponseTiming,
+  type RobotsFacts,
+} from "@/lib/scans/website-analysis"

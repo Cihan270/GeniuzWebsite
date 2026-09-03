@@ -92,8 +92,8 @@ export const aiDevelopmentPage: ServiceHubContent = {
       id: "website-scan",
       title: "Website Scan",
       summary:
-        "Prototype / demonstratie: vaste demodata, geen live crawl. Los van de organisatiebrede Opportunity Scan.",
-      body: "Een UX-demo van een scanflow voor techniek, content en vindbaarheid. Resultaten zijn gelabeld als demodata — geen claim op een live analyse van jouw domein.",
+        "Prototype: acht dimensies gemeten op de opgegeven URL. Los van de organisatiebrede Opportunity Scan.",
+      body: "Een scanflow voor techniek, content en vindbaarheid. Techniek, metadata, structured data, AI-readiness, performance, toegankelijkheid, content en conversie worden gemeten uit de opgehaalde pagina, met per dimensie een uitklapbare onderbouwing per controle.",
       anchorId: "website-scan",
       badge: "Prototype",
       href: "/website-scan",
@@ -135,9 +135,9 @@ export const aiDevelopmentPage: ServiceHubContent = {
       },
       {
         id: "website-scan-live",
-        question: "Is de Website Scan een live crawl van mijn site?",
+        question: "Haalt de Website Scan mijn site echt op?",
         answer:
-          "Nee. In deze fase is het een expliciet prototype met vaste demodata. Het staat los van de AI Opportunity Scan op organisatieniveau.",
+          "Ja. De opgegeven pagina wordt opgehaald, samen met robots.txt en llms.txt, en daaruit worden alle acht dimensies gemeten. Alleen die ene pagina wordt gelezen — de scan loopt niet je hele site door. Performance meet structurele signalen en serverresponstijd, geen Lighthouse-meting in een browser; toegankelijkheid dekt wat in de markup controleerbaar is.",
       },
       {
         id: "onderhoud",

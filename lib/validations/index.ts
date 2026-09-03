@@ -13,6 +13,8 @@ export {
 
 export {
   normalizeWebsiteUrl,
+  websiteScanApiSchema,
   websiteScanInputSchema,
+  type WebsiteScanApiPayload,
   type WebsiteScanInputParsed,
 } from "@/lib/validations/website-scan"
