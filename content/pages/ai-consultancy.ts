@@ -37,7 +37,7 @@ export const aiConsultancyPage: ServiceHubContent = {
   ],
   offeringsHeading: "Wat we doen binnen consultancy",
   offeringsDescription:
-    "Vier bouwstenen op één hub. Detailpagina’s volgen later — hier vind je de kern van elk onderdeel, met ankers voor navigatie.",
+    "Vier bouwstenen die we los of in samenhang inzetten, afhankelijk van waar je organisatie staat.",
   offerings: [
     {
       id: "ai-scan",

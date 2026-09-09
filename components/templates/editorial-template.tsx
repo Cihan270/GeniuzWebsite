@@ -156,9 +156,11 @@ export function EditorialTemplate({
               </StaggerItem>
             ))}
           </Stagger>
-          <p className="mt-8 text-xs text-muted-foreground">
-            {content.team.portraitNote}
-          </p>
+          {content.team.portraitNote ? (
+            <p className="mt-8 text-xs text-muted-foreground">
+              {content.team.portraitNote}
+            </p>
+          ) : null}
         </Section>
       ) : null}
 
