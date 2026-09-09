@@ -12,7 +12,6 @@ import {
 } from "@/components/layout"
 import { getDictionary, hasDictionary } from "@/lib/dictionaries"
 import { enabledLocales, type EnabledLocale } from "@/lib/i18n/config"
-import { buildPageMetadata } from "@/lib/seo/metadata"
 import { getSiteUrl, SITE_NAME } from "@/lib/site"
 
 type LocaleLayoutProps = {
@@ -34,20 +33,23 @@ export async function generateMetadata({
     return {}
   }
 
-  const home = buildPageMetadata("home")
   const dict = await getDictionary(locale)
 
+  // Layout-level defaults only. Page-level SEO (canonical, robots, per-page
+  // title/description) comes from each page's own buildPageMetadata — spreading
+  // the homepage's metadata here would give every page without its own
+  // metadata, including the 404, a canonical pointing at the homepage and a
+  // conflicting "index, follow".
   return {
-    ...home,
     title: {
       default: dict.meta.defaultTitle,
       template: dict.meta.titleTemplate,
     },
     metadataBase: new URL(getSiteUrl()),
     openGraph: {
-      ...home.openGraph,
       siteName: SITE_NAME,
       locale: "nl_NL",
+      type: "website",
     },
   }
 }

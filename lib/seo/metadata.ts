@@ -30,7 +30,9 @@ export function buildMetadataFromSeo(
   const canonical = absoluteUrl(path, defaultLocale)
 
   return {
-    title: seo.title,
+    // Absolute: content titles already carry the brand suffix, so the layout's
+    // "%s | Geniuz" template would duplicate it.
+    title: { absolute: seo.title },
     description: seo.description,
     alternates: {
       canonical,
