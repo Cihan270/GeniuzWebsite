@@ -251,7 +251,7 @@ export const homePage: HomePageContent = {
         id: "cihan",
         name: "Cihan Uz",
         role: "Oprichter",
-        bio: "HBO Business IT en ervaring met consultancy- en onderzoeksopdrachten binnen zijn opleiding. Focus op analyse, structuur en uitvoerbare richting.",
+        bio: "Business IT & Management met een pre-master aan de Universiteit Twente. Adviesopdrachten voor onder meer Politie Nederland, DUO en Nedap. Focus op procesanalyse en uitvoerbare richting.",
       },
     ],
   },

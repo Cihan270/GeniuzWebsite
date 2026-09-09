@@ -173,13 +173,47 @@ export type UtilityPageContent = PageContentSkeleton & {
 }
 
 /** Legal concept pages — visible draft banner; no AVG/compliance claims. */
-export type LegalPageContent = PageContentSkeleton & {
+/**
+ * 404 content. Not a `PageContentSkeleton`: it has no published route, no
+ * canonical and no sitemap entry.
+ */
+export type NotFoundContent = {
+  eyebrow: string
+  h1: string
+  lead: string
+  primaryCta: PageCta
+  secondaryCta: PageCta
+  destinationsHeading: string
+  destinations: readonly {
+    id: string
+    title: string
+    summary: string
+    href: string
+  }[]
+}
+
+export type LegalSection = ContentSectionStub & {
+  /** Bullets rendered under `body` — for enumerations like data categories. */
+  items?: readonly string[]
+}
+
+export type LegalPageContent = Omit<PageContentSkeleton, "sections"> & {
   kind: "legal"
-  legalStatus: "draft_legal_review"
+  /**
+   * `draft_legal_review` shows the concept banner and requires `conceptBanner`.
+   * `published` renders as a normal document and requires the statutory
+   * identity block (KvK, adres) to be filled in — enforced by the QA guard.
+   */
+  legalStatus: "draft_legal_review" | "published"
   eyebrow: string
   lead: string
   /** Visible site-wide concept notice (not a compliance statement). */
-  conceptBanner: string
+  conceptBanner?: string
+  /** ISO date shown as "Laatst bijgewerkt". Required once published. */
+  lastUpdated?: string
+  /** Renders the statutory identity block (naam, KvK, adres, e-mail). */
+  showIdentity?: boolean
+  sections: readonly LegalSection[]
 }
 
 /** Over Geniuz and similar long-form editorial pages. */

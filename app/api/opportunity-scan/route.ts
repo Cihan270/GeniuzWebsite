@@ -40,6 +40,16 @@ export async function POST(request: Request) {
   const result = calculateOpportunity(parsed.data.inputs)
   const mail = await sendOpportunityScanLeadMail(parsed.data)
 
+  if (mail.sent !== true) {
+    // The gate still unlocks client-side, but this lead never reached us —
+    // log it loudly rather than letting it disappear behind a 200.
+    console.error(
+      "[opportunity-scan] lead mail not delivered:",
+      mail.reason,
+      parsed.data.lead.email,
+    )
+  }
+
   return NextResponse.json({
     ok: true,
     score: result.opportunityScore,

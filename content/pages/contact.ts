@@ -33,9 +33,8 @@ export const contactPage: ContactPageContent = {
     submittingLabel: "Bezig…",
     successHeading: "Bericht ontvangen",
     successBody:
-      "Bedankt. We hebben je bericht ontvangen en nemen zo snel mogelijk contact op. Check ook je inbox voor een bevestiging (als mail is geconfigureerd).",
-    errorGeneric:
-      "Versturen lukte niet. Probeer het later opnieuw of mail ons rechtstreeks.",
+      "Bedankt. We hebben je bericht ontvangen en nemen zo snel mogelijk contact op. Je krijgt een bevestiging in je inbox.",
+    errorGeneric: `Versturen lukte niet. Probeer het later opnieuw of mail ons rechtstreeks op ${ORGANIZATION.email}.`,
     topics: [
       { value: "adviesgesprek", label: "Adviesgesprek" },
       { value: "opportunity-scan", label: "AI Opportunity Scan" },

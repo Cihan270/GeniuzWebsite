@@ -35,9 +35,9 @@ export const aiTrainingPage: ServiceHubContent = {
       body: "Sessies en programma’s sluiten aan op jullie processen en risico’s. Geen eindeloze tool-demo’s zonder werkcontext — wel oefenen, besliskaders en afspraken die blijven hangen.",
     },
   ],
-  offeringsHeading: "Programma’s op deze hub",
+  offeringsHeading: "Onze programma’s",
   offeringsDescription:
-    "Vier richtingen op hubniveau. Diepere detailpagina’s volgen later; hier de inhoud die ertoe doet voor keuzes en navigatie.",
+    "Vier richtingen, van praktische workshops tot beleid en managementkaders. We stemmen inhoud en niveau af op je team.",
   offerings: [
     {
       id: "workshops",

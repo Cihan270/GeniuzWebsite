@@ -10,7 +10,7 @@ export const overOnsPage: EditorialPageContent = {
   h1Accent: "eigen uitvoeringskracht",
   lead: "Geniuz helpt organisaties eerst te begrijpen waar AI waarde oplevert — en bouwt daarna wat werkelijk nodig is. Geen hype, geen theater: onderzoeken, prioriteren, bouwen en implementeren.",
   seo: {
-    title: "Over Geniuz",
+    title: "Over Geniuz | Geniuz",
     description:
       "Geniuz is AI-consultancy met eigen uitvoeringskracht. Eerst waarde begrijpen, daarna bouwen wat nodig is.",
   },
@@ -32,8 +32,7 @@ export const overOnsPage: EditorialPageContent = {
     eyebrow: "Team",
     heading: "Wie je spreekt",
     body: "Een klein, ondernemend team. We groeien bewust — geen opgeblazen bureauclaim, wel verantwoordelijkheid voor wat we adviseren en bouwen.",
-    portraitNote:
-      "Portretten volgen — placeholder-initialen tot professionele foto’s beschikbaar zijn.",
+    portraitNote: "",
     members: [
       {
         id: "ruchan",
@@ -45,7 +44,7 @@ export const overOnsPage: EditorialPageContent = {
         id: "cihan",
         name: "Cihan Uz",
         role: "Oprichter",
-        bio: "HBO Business IT en ervaring met consultancy- en onderzoeksopdrachten binnen zijn opleiding. Focus op analyse, structuur en uitvoerbare richting.",
+        bio: "Business IT & Management aan Windesheim en de pre-master Business Information Technology aan de Universiteit Twente. Voerde advies- en procesopdrachten uit voor onder meer Politie Nederland, DUO, Univé en Nedap. Focus op procesanalyse, architectuur en uitvoerbare richting.",
       },
     ],
   },

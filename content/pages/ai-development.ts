@@ -35,9 +35,9 @@ export const aiDevelopmentPage: ServiceHubContent = {
       body: "Integraties, workflows of maatwerk — alleen als de case het draagt. We documenteren aannames, falen openlijk waar nodig, en plannen adoptie mee in plaats van achteraf.",
     },
   ],
-  offeringsHeading: "Oplossingen op deze hub",
+  offeringsHeading: "Wat we bouwen",
   offeringsDescription:
-    "Ankers voor navigatie en SEO op hubniveau. Unieke detailpagina’s volgen in een latere contentfase — hier geen dunne SEO-subroutes.",
+    "Vier soorten oplossingen. Welke past, blijkt uit de analyse vooraf — niet uit de techniek die op dat moment populair is.",
   offerings: [
     {
       id: "ai-agents",

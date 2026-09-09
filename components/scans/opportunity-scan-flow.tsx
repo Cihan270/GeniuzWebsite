@@ -18,6 +18,7 @@ import {
   calculateOpportunity,
   clearOpportunityScan,
   createEmptyOpportunityPersisted,
+  OPPORTUNITY_SCAN_STORAGE_KEY,
   readOpportunityScan,
   writeOpportunityScan,
   type OpportunityInputs,
@@ -67,12 +68,35 @@ function subscribeScanStore(onStoreChange: () => void): () => void {
   }
 }
 
+/**
+ * useSyncExternalStore compares snapshots with Object.is, so the getters must
+ * return the same reference until the stored value actually changes. Cache on
+ * the raw localStorage string and only re-parse when it differs.
+ */
+const emptySnapshot: OpportunityScanPersisted = createEmptyOpportunityPersisted()
+
+let cachedRaw: string | null = null
+let cachedSnapshot: OpportunityScanPersisted = emptySnapshot
+
 function getScanSnapshot(): OpportunityScanPersisted {
-  return readOpportunityScan() ?? createEmptyOpportunityPersisted()
+  if (typeof window === "undefined") return emptySnapshot
+
+  let raw: string | null = null
+  try {
+    raw = window.localStorage.getItem(OPPORTUNITY_SCAN_STORAGE_KEY)
+  } catch {
+    raw = null
+  }
+
+  if (raw !== cachedRaw) {
+    cachedRaw = raw
+    cachedSnapshot = readOpportunityScan() ?? emptySnapshot
+  }
+  return cachedSnapshot
 }
 
 function getServerScanSnapshot(): OpportunityScanPersisted {
-  return createEmptyOpportunityPersisted()
+  return emptySnapshot
 }
 
 function notifyScanStore(): void {

@@ -10,11 +10,13 @@ import {
   assertFase1ContentGuards,
   assertFase1PublicLinks,
 } from "../lib/seo/assert-fase1-links"
+import { assertLegalPages } from "../lib/seo/assert-legal-pages"
 
 const checks: { name: string; run: () => void }[] = [
   { name: "Fase 1 IA invariants", run: assertFase1IaInvariants },
   { name: "Fase 1 public links", run: assertFase1PublicLinks },
   { name: "Fase 1 content guards", run: assertFase1ContentGuards },
+  { name: "Legal pages", run: assertLegalPages },
 ]
 
 let failed = 0
