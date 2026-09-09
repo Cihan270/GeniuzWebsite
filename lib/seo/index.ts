@@ -3,6 +3,7 @@ export {
   assertFase1ContentGuards,
   assertFase1PublicLinks,
 } from "@/lib/seo/assert-fase1-links"
+export { assertLegalPages } from "@/lib/seo/assert-legal-pages"
 export { getSeoForRoute, getSeoMatrix, pageSeoToMeta } from "@/lib/seo/matrix"
 export { buildMetadataFromSeo, buildPageMetadata } from "@/lib/seo/metadata"
 export {

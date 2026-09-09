@@ -185,11 +185,9 @@ const navigationNl: SiteNavigation = {
     legal: [
       { id: "f-privacy", label: "Privacy", href: "/privacy" },
       { id: "f-cookies", label: "Cookiebeleid", href: "/cookiebeleid" },
-      {
-        id: "f-voorwaarden",
-        label: "Algemene voorwaarden",
-        href: "/algemene-voorwaarden",
-      },
+      // Algemene voorwaarden staan bewust niet in de footer zolang die pagina
+      // een concept is: een niet-bindende placeholder onder die naam schaadt
+      // meer dan hij oplevert. Terugzetten zodra de definitieve tekst er is.
     ],
   },
 }

@@ -106,5 +106,6 @@ export {
   algemeneVoorwaardenPage,
   cookiebeleidPage,
   insightsIndexPage,
+  notFoundPage,
   privacyPage,
 } from "@/content/pages/supporting"

@@ -34,7 +34,8 @@ export const consentCategories: readonly ConsentCategory[] = [
   {
     id: "marketing",
     required: false,
-    enabled: true,
+    // Never ask consent for a category that loads nothing.
+    enabled: FEATURE_MARKETING,
   },
 ] as const
 
