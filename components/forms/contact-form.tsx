@@ -78,7 +78,11 @@ export function ContactForm({ content, className }: ContactFormProps) {
         const body = (await res.json().catch(() => null)) as {
           error?: string
         } | null
-        setFormError(body?.error ?? content.errorGeneric)
+        // 4xx carries a specific validation message; 5xx means delivery failed
+        // on our side, where the friendlier fallback copy is more useful.
+        setFormError(
+          res.status < 500 ? (body?.error ?? content.errorGeneric) : content.errorGeneric,
+        )
         return
       }
 

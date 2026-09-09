@@ -38,14 +38,17 @@ export async function POST(request: Request) {
 
   const mail = await sendContactMail(parsed.data)
 
+  if (mail.sent !== true) {
+    // The lead only exists in this request — never report success we cannot back up.
+    console.error("[contact] mail not delivered:", mail.reason, mail.detail ?? "")
+    return NextResponse.json(
+      { ok: false, error: "Versturen mislukt", reason: mail.reason },
+      { status: 502 },
+    )
+  }
+
   return NextResponse.json({
     ok: true,
-    mail:
-      mail.sent === true
-        ? {
-            status: "sent" as const,
-            confirmationSent: mail.confirmationSent,
-          }
-        : { status: mail.reason },
+    mail: { status: "sent" as const, confirmationSent: mail.confirmationSent },
   })
 }
